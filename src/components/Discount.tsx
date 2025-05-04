@@ -116,20 +116,11 @@ const Discount = () => {
 
   return (
     <div className="relative mt-8 flex flex-col md:flex-row w-full md:w-[90%] mx-auto items-center bg-purple-700 rounded-none md:rounded-xl overflow-hidden shadow p-4 md:p-6 gap-4">
-      {/* تبلیغ */}
-      <div className="w-[200px] h-[150px] md:w-1/3 md:h-auto mb-4 md:mb-0 relative">
-        {/* عکس موبایل */}
-        <img
-          src="/images/dis.svg"
-          alt="تبلیغ"
-          className="w-full h-full object-contain rounded-lg block md:hidden"
-        />
-        {/* عکس دسکتاپ */}
-        <img
-          src="/images/discount.webp"
-          alt="تبلیغ"
-          className="w-full h-full object-cover rounded-lg hidden md:block"
-        />
+      {/* عنوان پیشنهاد شگفت‌انگیز */}
+      <div className="w-full md:w-1/3 flex items-center justify-center mb-4 md:mb-0">
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center">
+          پیشنهاد شگفت‌انگیز
+        </h2>
       </div>
 
       {/* اسلایدر محصولات */}

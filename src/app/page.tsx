@@ -1,16 +1,14 @@
 import Hero from "@/components/Hero";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import HeroSlider from "@/components/HeroSlider";
-import Discount from "@/components/Discount";
+
 import MobileMenu from "@/components/MobileMenu";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <HeroSlider />
-      <Discount />
+      
       <MobileMenu />
       <Hero />
       <main className="max-w-7xl mx-auto p-4">
