@@ -58,7 +58,7 @@ type Product = {
     const displayProducts = products?.length ? products : defaultProducts;
   
     return (
-      <div className="w-full md:w-[99%] px-4 md:px-8 mt-8">
+      <div className="w-full px-4 md:px-8 mt-8">
         <div className="flex items-center gap-4 mb-6">
           <h2 className="text-lg md:text-xl font-bold whitespace-nowrap">
             {title}
@@ -97,7 +97,7 @@ type Product = {
                     <span className="text-lg font-bold text-gray-900">
                       {product.price}
                     </span>
-                    <span className="text-sm text-gray-600">تومان</span>
+                    <span className="text-sm font-bold italic text-shadow-yellow-700">تومان</span>
                   </div>
                 </div>
               </div>

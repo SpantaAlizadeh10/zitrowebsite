@@ -117,6 +117,7 @@ let logoName = "زیترو";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [searchValue, setSearchValue] = useState("");
 
   return (
     <>
@@ -138,9 +139,11 @@ export default function Header() {
             <input
               type="text"
               placeholder={`جستجو در `}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
               className="w-full sm:w-xl text-black border border-gray-300 rounded-lg py-4 pr-4 pl-10 text-right focus:outline-none hover:border-orange-500 transition-colors"
             />
-            <span className="absolute right-17 top-1/2 transform -translate-y-1/2 text-orange-600">زیترو</span>
+            <span className={`absolute right-17 top-1/2 transform -translate-y-1/2 text-orange-600 ${searchValue ? 'hidden' : ''}`}>زیترو</span>
             <FaSearch className="absolute left-3 text-gray-500" />
           </div>
 

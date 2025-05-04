@@ -104,7 +104,7 @@ const MobileMenu = () => {
           </div>
 
           <div className="flex flex-col items-center">
-            <FaUser className="text-2xl text-gray-600" />
+            <FaUser className="text-2xl text-gray-600  " />
             <span className="text-xs mt-1">پروفایل</span>
           </div>
         </div>
@@ -116,7 +116,7 @@ const MobileMenu = () => {
           {/* هدر منو */}
           <div className="flex justify-between items-center p-4 border-b border-gray-200">
             <Image
-              src="/images/logo.png"
+              src="/images/zitrologo.svg"
               alt="Zitro Logo"
               width={100}
               height={40}
