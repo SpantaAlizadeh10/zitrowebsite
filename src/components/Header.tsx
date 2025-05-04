@@ -140,7 +140,7 @@ export default function Header() {
               placeholder={`جستجو در `}
               className="w-full sm:w-xl text-black border border-gray-300 rounded-lg py-4 pr-4 pl-10 text-right focus:outline-none hover:border-orange-500 transition-colors"
             />
-            <span className="absolute right-16.5 top-1/2 transform -translate-y-1/2 text-orange-600">زیترو</span>
+            <span className="absolute right-17 top-1/2 transform -translate-y-1/2 text-orange-600">زیترو</span>
             <FaSearch className="absolute left-3 text-gray-500" />
           </div>
 

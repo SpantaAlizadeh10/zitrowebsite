@@ -128,9 +128,13 @@ const Discount = () => {
         <div 
           className="flex gap-3 pb-2"
           style={{
-            msOverflowStyle: 'none',  // برای IE و Edge
-            scrollbarWidth: 'none',    // برای Firefox
-            WebkitOverflowScrolling: 'touch'  // برای iOS
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none',
+            WebkitOverflowScrolling: 'touch',
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'nowrap',
+            width: 'max-content'
           }}
         >
           {products.map((item) => (
