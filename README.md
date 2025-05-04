@@ -1,24 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zitro - E-commerce Website
 
-## Getting Started
+This project is an e-commerce website inspired by Zitro, built using Next.js and TypeScript.
 
-First, run the development server:
+## 🚀 Demo Link
 
+[https://zitrowebsite.vercel.app/](https://zitrowebsite.vercel.app/)
+
+## 🛠️ Technologies Used
+
+- **Next.js 14** - React framework for building web applications
+- **TypeScript** - For static typing and enhanced security
+- **Tailwind CSS** - For styling
+- **React Icons** - For icons
+- **Vercel** - For deployment and hosting
+
+## ✨ Features
+
+- Responsive user interface
+- Multi-level dropdown menu
+- Product slider with infinite loop functionality
+- Mobile menu
+- IRANSans font for Persian language support
+- RTL support
+
+## 🚀 Getting Started
+
+1. Clone the project:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/SpantaAlizadeh10/zitrowebsite.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+cd zitrowebsite
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Build for production:
+```bash
+npm run build
+```
+
+## 📝 Important Notes
+
+- The project uses IRANSans font
+- Full RTL support
+- Optimized for both mobile and desktop
+
+## 🤝 Contributing
+
+Contributions, bug reports, and feature requests are always welcome!
+
+## 📄 License
+
+This project is licensed under the MIT License.
 
 ## Learn More
 
