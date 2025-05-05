@@ -1,26 +1,24 @@
-import Image from "next/image";
-import Link from "next/link";
-import { FaShare, FaShoppingCart, FaHeadphones, FaShieldAlt, FaTruck } from "react-icons/fa";
 import { notFound } from 'next/navigation';
 import { categories, brands, getProductByCategoryBrandAndId } from '@/data/data';
+import Link from "next/link";
+import { FaShare, FaShoppingCart, FaHeadphones, FaShieldAlt, FaTruck } from "react-icons/fa";
 
-type Props = {
+interface PageProps {
   params: {
     category: string;
     brand: string;
     id: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function Page({ params, searchParams }: Props) {
+export default async function Page({ params }: PageProps) {
   const { category, brand, id } = params;
-  
   const product = getProductByCategoryBrandAndId(category, brand, id);
 
   if (!product) {
     notFound();
   }
+
 
   return (
     <div className="container mx-auto px-4 py-8">
