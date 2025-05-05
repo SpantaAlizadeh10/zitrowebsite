@@ -1,80 +1,94 @@
 import NewProducts from "./NewProducts";
 
 const Watch = () => {
-  const handsfreeProducts = [
+  const watchProducts = [
     {
       id: 1,
-      name: "ایرپاد پرو اپل",
+      name: "ساعت پرو اپل",
       model: "AirPods Pro 2",
       price: "8,900,000",
-      image: "/images/watch1.webp"
+      image: "/images/watch1.webp",
+      category: "watch",
+      brand: "apple"
     },
     {
       id: 2,
-      name: "هندزفری سامسونگ",
+      name: "ساعت سامسونگ",
       model: "Galaxy Buds2 Pro",
       price: "5,200,000",
-      image: "/images/watch2.webp"
+      image: "/images/watch2.webp",
+      category: "watch",
+      brand: "samsung"
     },
     {
       id: 3,
-      name: "هدفون سونی",
+      name: "ساعت سونی",
       model: "WH-1000XM4",
       price: "9,800,000",
-      image: "/images/watch3.webp"
+      image: "/images/watch3.webp",
+      category: "watch",
+      brand: "sony"
     },
     {
       id: 4,
-      name: "ایرپاد مکس",
+      name: "ساعت مکس",
       model: "AirPods Max",
       price: "16,500,000",
-      image: "/images/watch4.webp"
+      image: "/images/watch4.webp",
+      category: "watch",
+      brand: "apple"
     },
     {
       id: 5,
-      name: "هندزفری شیائومی",
+      name: "ساعت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/watch5.webp"
-    }
-    ,
+      image: "/images/watch5.webp",
+      category: "watch",
+      brand: "xiaomi"
+    },
     {
       id: 6,
-      name: "هندزفری شیائومی",
+      name: "ساعت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/watch6.webp"
-    }
-    ,
+      image: "/images/watch6.webp",
+      category: "watch",
+      brand: "xiaomi"
+    },
     {
       id: 7,
-      name: "هندزفری شیائومی",
+      name: "ساعت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/watch7.webp"
-    }
-    ,
+      image: "/images/watch7.webp",
+      category: "watch",
+      brand: "xiaomi"
+    },
     {
       id: 8,
-      name: "هندزفری شیائومی",
+      name: "ساعت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/watch8.webp"
-    }
-    ,
+      image: "/images/watch8.webp",
+      category: "watch",
+      brand: "xiaomi"
+    },
     {
       id: 9,
-      name: "هندزفری شیائومی",
+      name: "ساعت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/watch9.webp"
+      image: "/images/watch9.webp",
+      category: "watch",
+      brand: "xiaomi"
     }
   ];
 
   return (
     <NewProducts 
-      title="هندزفری و هدفون"
-      products={handsfreeProducts}
+      title="ساعت هوشمند"
+      products={watchProducts}
     />
   );
 };

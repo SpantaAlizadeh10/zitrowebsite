@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 
 // اول تعریف تایپ برای محصول
 type Product = {
@@ -7,6 +7,8 @@ type Product = {
     model: string;
     price: string;
     image: string;
+    category: string;
+    brand: string;
   }
   
 
@@ -23,35 +25,45 @@ type Product = {
         name: "گوشی سامسونگ A54",
         model: "Galaxy A54 5G",
         price: "12,499,000",
-        image: "/images/newP1.webp"
+        image: "/images/newP1.webp",
+        category: "mobile",
+        brand: "samsung"
       },
       {
         id: 2,
         name: "لپ تاپ اپل مک‌بوک",
         model: "MacBook Air M2",
         price: "52,900,000",
-        image: "/images/newP2.webp"
+        image: "/images/newP2.webp",
+        category: "laptop",
+        brand: "apple"
       },
       {
         id: 3,
         name: "ساعت هوشمند اپل",
         model: "Apple Watch Series 8",
         price: "18,800,000",
-        image: "/images/newP3.webp"
+        image: "/images/newP3.webp",
+        category: "watch",
+        brand: "apple"
       },
       {
         id: 4,
         name: "ایرپاد پرو",
         model: "AirPods Pro 2",
         price: "8,900,000",
-        image: "/images/newP4.webp"
+        image: "/images/newP4.webp",
+        category: "headphone",
+        brand: "apple"
       },
       {
         id: 5,
         name: "تبلت سامسونگ",
         model: "Galaxy Tab S9",
         price: "24,500,000",
-        image: "/images/newP5.webp"
+        image: "/images/newP5.webp",
+        category: "tablet",
+        brand: "samsung"
       }
     ];
   
@@ -75,8 +87,9 @@ type Product = {
               WebkitOverflowScrolling: 'touch'
             }}>
             {displayProducts.map((product) => (
-              <div
-                key={product.id}
+              <Link 
+                key={product.id} 
+                href={`/products/${product.category}/${product.brand}/${product.id}`}
                 className="min-w-[calc(20%-16px)] flex-shrink-0 bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="aspect-square mb-4">
@@ -100,7 +113,7 @@ type Product = {
                     <span className="text-sm font-bold italic text-shadow-yellow-700">تومان</span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

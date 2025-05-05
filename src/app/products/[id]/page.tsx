@@ -10,7 +10,7 @@ interface ProductSpec {
 }
 
 interface SimilarProduct {
-  id: string;
+  id: number;
   title: string;
   price: number;
   discount: number;
@@ -27,103 +27,93 @@ interface Product {
 }
 
 // این داده‌ها باید از API یا دیتابیس دریافت شوند
-const products: Record<string, Product> = {
-  "1": {
-    title: "تبلت شیائومی مدل Redmi Pad SE ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+const products: Record<number, Product> = {
+  1: {
+    title: "ایرپاد پرو اپل",
     specifications: [
-      { title: "حافظه داخلی", value: "256 گیگابایت" },
-      { title: "حافظه RAM", value: "8 گیگابایت" },
-      { title: "اندازه صفحه نمایش", value: "11 اینچ" },
-      { title: "رزولوشن تصویر", value: "1920 × 1200 پیکسل" },
-      { title: "سیستم عامل", value: "Android 13" },
-      { title: "پردازنده", value: "Qualcomm Snapdragon 680" },
-      { title: "دوربین پشت", value: "8 مگاپیکسل" },
-      { title: "دوربین جلو", value: "5 مگاپیکسل" },
-      { title: "باتری", value: "8000 میلی‌آمپر ساعت" },
-      { title: "وزن", value: "478 گرم" }
+      { title: "نوع", value: "ایرپاد پرو" },
+      { title: "نسخه", value: "نسخه 2" },
+      { title: "رابط اتصال", value: "بلوتوث 5.3" },
+      { title: "مقاومت در برابر آب", value: "IPX4" },
+      { title: "مدت زمان پخش", value: "6 ساعت" },
+      { title: "مدت زمان شارژ", value: "30 دقیقه" },
+      { title: "وزن", value: "5.3 گرم" },
+      { title: "رنگ", value: "سفید" }
     ],
-    colors: ["مشکی", "نقره‌ای", "سبز"],
-    warranty: ["18 ماهه", "24 ماهه"],
-    image: "/images/tablet1.webp",
+    colors: ["سفید"],
+    warranty: ["12 ماهه", "18 ماهه"],
+    image: "/images/newP4.webp",
     similarProducts: [
-      { id: "2", title: "تبلت پوکو مدل Poco Pad", price: 21149000, discount: 8, image: "/images/tablet2.webp" },
-      { id: "3", title: "تبلت شیائومی مدل Pad 6s Pro", price: 45951000, discount: 28, image: "/images/tablet3.webp" },
-      { id: "4", title: "تبلت هوشمند شیائومی مدل REDMI PAD PRO", price: 23095700, discount: 32, image: "/images/tablet4.webp" }
+      { id: 2, title: "هندزفری سامسونگ", price: 5200000, discount: 15, image: "/images/Mobile2.webp" },
+      { id: 3, title: "هدفون سونی", price: 9800000, discount: 10, image: "/images/Mobile3.webp" },
+      { id: 4, title: "ایرپاد مکس", price: 16500000, discount: 5, image: "/images/Mobile4.webp" }
     ]
   },
-  "2": {
-    title: "تبلت پوکو مدل Poco Pad ظرفیت 256 گیگابایت رم 8 گیگابایت",
+  2: {
+    title: "هندزفری سامسونگ",
     specifications: [
-      { title: "حافظه داخلی", value: "256 گیگابایت" },
-      { title: "حافظه RAM", value: "8 گیگابایت" },
-      { title: "اندازه صفحه نمایش", value: "12.1 اینچ" },
-      { title: "رزولوشن تصویر", value: "2560 × 1600 پیکسل" },
-      { title: "سیستم عامل", value: "Android 14" },
-      { title: "پردازنده", value: "Qualcomm Snapdragon 7s Gen 2" },
-      { title: "دوربین پشت", value: "8 مگاپیکسل" },
-      { title: "دوربین جلو", value: "8 مگاپیکسل" },
-      { title: "باتری", value: "10000 میلی‌آمپر ساعت" },
-      { title: "وزن", value: "571 گرم" }
+      { title: "نوع", value: "گالکسی بادز 2 پرو" },
+      { title: "رابط اتصال", value: "بلوتوث 5.3" },
+      { title: "مقاومت در برابر آب", value: "IPX7" },
+      { title: "مدت زمان پخش", value: "5 ساعت" },
+      { title: "مدت زمان شارژ", value: "40 دقیقه" },
+      { title: "وزن", value: "5.5 گرم" },
+      { title: "رنگ", value: "مشکی" }
     ],
-    colors: ["مشکی", "نقره‌ای"],
-    warranty: ["18 ماهه", "24 ماهه"],
-    image: "/images/tablet2.webp",
+    colors: ["مشکی", "سفید"],
+    warranty: ["12 ماهه", "18 ماهه"],
+    image: "/images/Mobile2.webp",
     similarProducts: [
-      { id: "1", title: "تبلت شیائومی مدل Redmi Pad SE", price: 42500000, discount: 28, image: "/images/tablet1.webp" },
-      { id: "3", title: "تبلت شیائومی مدل Pad 6s Pro", price: 45951000, discount: 28, image: "/images/tablet3.webp" },
-      { id: "4", title: "تبلت هوشمند شیائومی مدل REDMI PAD PRO", price: 23095700, discount: 32, image: "/images/tablet4.webp" }
+      { id: 1, title: "ایرپاد پرو اپل", price: 8900000, discount: 0, image: "/images/newP4.webp" },
+      { id: 3, title: "هدفون سونی", price: 9800000, discount: 10, image: "/images/Mobile3.webp" },
+      { id: 4, title: "ایرپاد مکس", price: 16500000, discount: 5, image: "/images/Mobile4.webp" }
     ]
   },
-  "3": {
-    title: "تبلت شیائومی مدل Pad 6s Pro ظرفیت 512 گیگابایت رم 12 گیگابایت",
+  3: {
+    title: "هدفون سونی",
     specifications: [
-      { title: "حافظه داخلی", value: "512 گیگابایت" },
-      { title: "حافظه RAM", value: "12 گیگابایت" },
-      { title: "اندازه صفحه نمایش", value: "12.4 اینچ" },
-      { title: "رزولوشن تصویر", value: "3048 × 2032 پیکسل" },
-      { title: "سیستم عامل", value: "Android 14" },
-      { title: "پردازنده", value: "Qualcomm Snapdragon 8 Gen 2" },
-      { title: "دوربین پشت", value: "50 مگاپیکسل" },
-      { title: "دوربین جلو", value: "32 مگاپیکسل" },
-      { title: "باتری", value: "10000 میلی‌آمپر ساعت" },
-      { title: "وزن", value: "590 گرم" }
+      { title: "نوع", value: "WH-1000XM4" },
+      { title: "رابط اتصال", value: "بلوتوث 5.0" },
+      { title: "مقاومت در برابر آب", value: "IPX4" },
+      { title: "مدت زمان پخش", value: "30 ساعت" },
+      { title: "مدت زمان شارژ", value: "3 ساعت" },
+      { title: "وزن", value: "254 گرم" },
+      { title: "رنگ", value: "مشکی" }
     ],
     colors: ["مشکی", "نقره‌ای"],
-    warranty: ["18 ماهه", "24 ماهه"],
-    image: "/images/tablet3.webp",
+    warranty: ["12 ماهه", "24 ماهه"],
+    image: "/images/Mobile3.webp",
     similarProducts: [
-      { id: "1", title: "تبلت شیائومی مدل Redmi Pad SE", price: 42500000, discount: 28, image: "/images/tablet1.webp" },
-      { id: "2", title: "تبلت پوکو مدل Poco Pad", price: 21149000, discount: 8, image: "/images/tablet2.webp" },
-      { id: "4", title: "تبلت هوشمند شیائومی مدل REDMI PAD PRO", price: 23095700, discount: 32, image: "/images/tablet4.webp" }
+      { id: 1, title: "ایرپاد پرو اپل", price: 8900000, discount: 0, image: "/images/newP4.webp" },
+      { id: 2, title: "هندزفری سامسونگ", price: 5200000, discount: 15, image: "/images/Mobile2.webp" },
+      { id: 4, title: "ایرپاد مکس", price: 16500000, discount: 5, image: "/images/Mobile4.webp" }
     ]
   },
-  "4": {
-    title: "تبلت هوشمند شیائومی مدل REDMI PAD PRO",
+  4: {
+    title: "ایرپاد مکس",
     specifications: [
-      { title: "حافظه داخلی", value: "128 گیگابایت" },
-      { title: "حافظه RAM", value: "6 گیگابایت" },
-      { title: "اندازه صفحه نمایش", value: "11 اینچ" },
-      { title: "رزولوشن تصویر", value: "2560 × 1600 پیکسل" },
-      { title: "سیستم عامل", value: "Android 13" },
-      { title: "پردازنده", value: "Qualcomm Snapdragon 7s Gen 2" },
-      { title: "دوربین پشت", value: "8 مگاپیکسل" },
-      { title: "دوربین جلو", value: "8 مگاپیکسل" },
-      { title: "باتری", value: "8000 میلی‌آمپر ساعت" },
-      { title: "وزن", value: "478 گرم" }
+      { title: "نوع", value: "ایرپاد مکس" },
+      { title: "رابط اتصال", value: "بلوتوث 5.0" },
+      { title: "مقاومت در برابر آب", value: "IPX4" },
+      { title: "مدت زمان پخش", value: "20 ساعت" },
+      { title: "مدت زمان شارژ", value: "2 ساعت" },
+      { title: "وزن", value: "384 گرم" },
+      { title: "رنگ", value: "نقره‌ای" }
     ],
-    colors: ["مشکی", "نقره‌ای"],
-    warranty: ["18 ماهه", "24 ماهه"],
-    image: "/images/tablet4.webp",
+    colors: ["نقره‌ای", "سبز", "آبی"],
+    warranty: ["12 ماهه", "24 ماهه"],
+    image: "/images/Mobile4.webp",
     similarProducts: [
-      { id: "1", title: "تبلت شیائومی مدل Redmi Pad SE", price: 42500000, discount: 28, image: "/images/tablet1.webp" },
-      { id: "2", title: "تبلت پوکو مدل Poco Pad", price: 21149000, discount: 8, image: "/images/tablet2.webp" },
-      { id: "3", title: "تبلت شیائومی مدل Pad 6s Pro", price: 45951000, discount: 28, image: "/images/tablet3.webp" }
+      { id: 1, title: "ایرپاد پرو اپل", price: 8900000, discount: 0, image: "/images/newP4.webp" },
+      { id: 2, title: "هندزفری سامسونگ", price: 5200000, discount: 15, image: "/images/Mobile2.webp" },
+      { id: 3, title: "هدفون سونی", price: 9800000, discount: 10, image: "/images/Mobile3.webp" }
     ]
   }
 };
 
 export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = products[params.id];
+  const productId = parseInt(params.id);
+  const product = products[productId];
   
   if (!product) {
     return <div>محصول یافت نشد</div>;

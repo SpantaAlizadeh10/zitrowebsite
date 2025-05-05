@@ -1,73 +1,85 @@
 import NewProducts from "./NewProducts";
 
 const Tablet = () => {
-  const handsfreeProducts = [
+  const tabletProducts = [
     {
       id: 1,
-      name: "ایرپاد پرو اپل",
+      name: "تبلت پرو اپل",
       model: "AirPods Pro 2",
       price: "8,900,000",
-      image: "/images/tablet1.webp"
+      image: "/images/tablet1.webp",
+      category: "tablet",
+      brand: "apple"
     },
     {
       id: 2,
-      name: "هندزفری سامسونگ",
+      name: "تبلت سامسونگ",
       model: "Galaxy Buds2 Pro",
       price: "5,200,000",
-      image: "/images/tablet2.webp"
+      image: "/images/tablet2.webp",
+      category: "tablet",
+      brand: "samsung"
     },
     {
       id: 3,
-      name: "هدفون سونی",
+      name: "تبلت سونی",
       model: "WH-1000XM4",
       price: "9,800,000",
-      image: "/images/tablet3.webp"
+      image: "/images/tablet3.webp",
+      category: "tablet",
+      brand: "sony"
     },
     {
       id: 4,
-      name: "ایرپاد مکس",
+      name: "تبلت مکس",
       model: "AirPods Max",
       price: "16,500,000",
-      image: "/images/tablet4.webp"
+      image: "/images/tablet4.webp",
+      category: "tablet",
+      brand: "apple"
     },
     {
       id: 5,
-      name: "هندزفری شیائومی",
+      name: "تبلت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/tablet5.webp"
-    }
-    ,
+      image: "/images/tablet5.webp",
+      category: "tablet",
+      brand: "xiaomi"
+    },
     {
       id: 6,
-      name: "هندزفری شیائومی",
+      name: "تبلت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/tablet6.webp"
-    }
-    ,
+      image: "/images/tablet6.webp",
+      category: "tablet",
+      brand: "xiaomi"
+    },
     {
       id: 7,
-      name: "هندزفری شیائومی",
+      name: "تبلت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/tablet7.webp"
-    }
-    ,
+      image: "/images/tablet7.webp",
+      category: "tablet",
+      brand: "xiaomi"
+    },
     {
       id: 8,
-      name: "هندزفری شیائومی",
+      name: "تبلت شیائومی",
       model: "Redmi Buds 4 Pro",
       price: "2,800,000",
-      image: "/images/tablet8.webp"
+      image: "/images/tablet8.webp",
+      category: "tablet",
+      brand: "xiaomi"
     }
-   
   ];
 
   return (
     <NewProducts 
       title=" تبلت "
-      products={handsfreeProducts}
+      products={tabletProducts}
     />
   );
 };
