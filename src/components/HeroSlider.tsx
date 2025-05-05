@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Image from "next/image";
 
-// ایمپورت دستی عکس‌ها
+
 import hero1 from "../../public/images/hero1.webp";
 import hero2 from "../../public/images/hero2.webp";
 import hero3 from "../../public/images/hero3.webp";

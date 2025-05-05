@@ -3,10 +3,7 @@ import Image from "next/image";
 import top from "../../public/top.gif";
 import logo from "../../public/zitrologo.svg";
 import {
-  FaBoxes,
-  FaBolt,
-  FaRecycle,
-  FaNewspaper,
+ 
   FaCreditCard,
   FaStore,
   FaSearch,
@@ -121,11 +118,11 @@ export default function Header() {
 
   return (
     <>
-      <Image src={top} alt="top" className="md:h-12 h-8 w-full sm:w-full md:w-full" />
+      <Image src={top} alt="top" className="md:h-12 h-6 w-full sm:w-full md:w-full" />
       <header className="bg-white shadow-md sticky top-0 z-50 text-sm">
-        {/* بخش جستجه */}
+        {/* search section*/}
         <div className="max-w-[99%] mx-auto px-5 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          {/* لوگو-*/}
+          {/* logo-*/}
           <div className="hidden sm:block">
             <Image
               src={logo}
@@ -134,7 +131,7 @@ export default function Header() {
             />
           </div>
 
-          {/* input   آیکون ذره‌بین */}
+          {/*    search icon*/}
           <div className="flex items-center relative w-full sm:w-auto">
             <input
               type="text"
@@ -147,7 +144,7 @@ export default function Header() {
             <FaSearch className="absolute left-3 text-gray-500" />
           </div>
 
-          {/* آیکون‌ها - فقط در دسکتاپ */}
+          {/* Desktop icon */}
           <div className="hidden sm:flex sm:items-center gap-4 text-gray-600 text-lg">
             <span
               className="border border-gray-300 rounded-lg px-4 py-2 hover:bg-orange-100 hover:border-orange-500 hover:text-orange-500"
@@ -163,7 +160,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* منوی آیکون‌دار پایین */}
+        {/* branch menu*/}
         <div className="hidden md:block">
           <div className="max-w-[90%] mx-auto px-8 py-4 flex flex-row gap-4 text-gray-700">
             {[
@@ -185,7 +182,7 @@ export default function Header() {
                   <span className="text-xs">{label}</span>
                 </div>
 
-                {/* منوی کشویی بزرگ برای دسته‌بندی کالاها */}
+                {/* big menu*/}
                 {idx === 0 && isMenuOpen && (
                   <div 
                     className="absolute top-full right-0 w-[80vw] bg-gray-100 shadow-lg rounded-lg py-4 mt-1"
@@ -193,7 +190,7 @@ export default function Header() {
                     onMouseLeave={() => setIsMenuOpen(false)}
                   >
                     <div className="flex">
-                      {/* لیست دسته‌بندی‌ها */}
+                      {/* category list*/}
                       <div className="bg-white md:w-50 rounded-lg mx-4 p-4">
                         <div className="flex flex-col gap-4">
                           {categories.map((category, index) => (
@@ -202,7 +199,7 @@ export default function Header() {
                               className="group relative"
                               onMouseEnter={() => setHoveredCategory(category.title)}
                             >
-                              <div className="flex items-center gap-2 px-4 py-2 hover:rounded-lg hover:bg-gray-100 cursor-pointer">
+                              <div className="flex font-bold  items-center gap-2 px-4 py-2 hover:rounded-lg hover:bg-gray-100 cursor-pointer">
                                 <span className="text-lg">{category.icon}</span>
                                 <span className="text-sm">{category.title}</span>
                               </div>
