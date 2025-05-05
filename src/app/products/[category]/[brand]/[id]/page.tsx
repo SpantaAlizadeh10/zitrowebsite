@@ -6,11 +6,19 @@ import { FaShare, FaShoppingCart, FaHeadphones, FaShieldAlt, FaTruck } from "rea
 import { notFound } from 'next/navigation';
 import { categories, brands, getProductByCategoryBrandAndId } from '@/data/data';
 
-export default function ProductPage({ params }: { params: { category: string; brand: string; id: string } }) {
+interface PageProps {
+  params: {
+    category: string;
+    brand: string;
+    id: string;
+  };
+}
+
+export default function ProductPage({ params }: PageProps) {
   const product = getProductByCategoryBrandAndId(
     params.category,
     params.brand,
-    parseInt(params.id)
+    params.id
   );
 
   if (!product) {
