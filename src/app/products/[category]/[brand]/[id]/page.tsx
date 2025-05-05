@@ -12,12 +12,10 @@ interface PageProps {
   };
 }
 
-export default async function ProductPage({ params }: PageProps) {
-  const product = getProductByCategoryBrandAndId(
-    params.category,
-    params.brand,
-    params.id
-  );
+export default async function Page({ params }: PageProps) {
+  const { category, brand, id } = params;
+  
+  const product = getProductByCategoryBrandAndId(category, brand, id);
 
   if (!product) {
     notFound();
@@ -29,12 +27,12 @@ export default async function ProductPage({ params }: PageProps) {
       <div className="flex items-center gap-2 text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-blue-600">صفحه اصلی</Link>
         <span>/</span>
-        <Link href={`/products/${params.category}`} className="hover:text-blue-600">
-          {categories[params.category as keyof typeof categories]}
+        <Link href={`/products/${category}`} className="hover:text-blue-600">
+          {categories[category as keyof typeof categories]}
         </Link>
         <span>/</span>
-        <Link href={`/products/${params.category}/${params.brand}`} className="hover:text-blue-600">
-          {brands[params.brand as keyof typeof brands]}
+        <Link href={`/products/${category}/${brand}`} className="hover:text-blue-600">
+          {brands[brand as keyof typeof brands]}
         </Link>
         <span>/</span>
         <span>{product.name}</span>
@@ -119,4 +117,10 @@ export default async function ProductPage({ params }: PageProps) {
       </div>
     </div>
   );
+}
+
+export async function generateStaticParams() {
+  // این تابع برای تولید صفحات استاتیک استفاده می‌شود
+  // در حال حاضر خالی است چون ما صفحات را به صورت داینامیک تولید می‌کنیم
+  return [];
 }
