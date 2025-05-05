@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaShare, FaShoppingCart, FaHeadphones, FaShieldAlt, FaTruck } from "react-icons/fa";
@@ -14,7 +12,7 @@ interface PageProps {
   };
 }
 
-export default function ProductPage({ params }: PageProps) {
+export default async function ProductPage({ params }: PageProps) {
   const product = getProductByCategoryBrandAndId(
     params.category,
     params.brand,
@@ -24,9 +22,6 @@ export default function ProductPage({ params }: PageProps) {
   if (!product) {
     notFound();
   }
-
-  const [selectedColor, setSelectedColor] = useState(product.colors?.[0] || "");
-  const [selectedWarranty, setSelectedWarranty] = useState(product.warranty?.[0] || "");
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -90,12 +85,7 @@ export default function ProductPage({ params }: PageProps) {
                 {product.colors.map((color) => (
                   <button
                     key={color}
-                    onClick={() => setSelectedColor(color)}
-                    className={`px-3 py-1 rounded-full text-sm ${
-                      selectedColor === color
-                        ? "bg-blue-600 text-white"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                    }`}
+                    className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 hover:bg-gray-200"
                   >
                     {color}
                   </button>
@@ -112,12 +102,7 @@ export default function ProductPage({ params }: PageProps) {
                 {product.warranty.map((w) => (
                   <button
                     key={w}
-                    onClick={() => setSelectedWarranty(w)}
-                    className={`px-3 py-1 rounded-full text-sm ${
-                      selectedWarranty === w
-                        ? "bg-blue-600 text-white"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                    }`}
+                    className="px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 hover:bg-gray-200"
                   >
                     {w}
                   </button>
