@@ -4,15 +4,16 @@ import { FaShare, FaShoppingCart, FaHeadphones, FaShieldAlt, FaTruck } from "rea
 import { notFound } from 'next/navigation';
 import { categories, brands, getProductByCategoryBrandAndId } from '@/data/data';
 
-interface PageProps {
+type Props = {
   params: {
     category: string;
     brand: string;
     id: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params, searchParams }: Props) {
   const { category, brand, id } = params;
   
   const product = getProductByCategoryBrandAndId(category, brand, id);
